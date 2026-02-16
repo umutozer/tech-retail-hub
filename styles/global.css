@@ -1,0 +1,126 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing);
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+p {
+  font-size: 16px;
+  margin-bottom: var(--spacing);
+}
+small {
+  font-size: 12px;
+  color: var(--light-text-color);
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+.btn {
+  display: inline-block;
+  padding: var(--spacing) var(--spacing * 2);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+.card {
+  background-color: var(--background-color);
+  padding: var(--spacing);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.section-title {
+  font-size: 24px;
+  margin-bottom: var(--spacing);
+}
+form {
+  margin-bottom: var(--spacing);
+}
+form input, form textarea, form select {
+  width: 100%;
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--radius);
+}
+.text-center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--dark-bg-color);
+    --text-color: var(--light-text-color);
+  }
+}
+@media (max-width: var(--breakpoint-tablet)) {
+  .container {
+    padding: 0 var(--spacing / 2);
+  }
+}
+@media (max-width: var(--breakpoint-mobile)) {
+  .container {
+    padding: 0 var(--spacing / 4);
+  }
+}
